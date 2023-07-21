@@ -4,7 +4,7 @@ import DeckBuilderPane from 'components/DeckBuilderPane'
 
 export default function Home() {
   return (
-    <main class="m-3 space-y-3">
+    <main className="m-3 space-y-3">
         <HeaderToolbar />
         <DeckBuilderPane />
     </main>
