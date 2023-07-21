@@ -12,7 +12,7 @@ const HeaderToolbar = (props) => {
                 <div className="flex-initial">Login</div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default HeaderToolbar;

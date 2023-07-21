@@ -1,7 +1,10 @@
-import InlineButton from "@/components/common/InlineButton"
+import InlineButton from "@/components/common/InlineButton";
 
 const CardItem = (props) => {
-    const USDollar = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'})
+    const USDollar = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+    });
 
     return (
         <div className="justify-between flex">
@@ -11,7 +14,7 @@ const CardItem = (props) => {
                 <InlineButton text="+" />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default CardItem
+export default CardItem;

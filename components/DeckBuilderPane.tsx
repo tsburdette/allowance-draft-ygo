@@ -1,5 +1,5 @@
-import SearchPane from 'components/SearchPane'
-import DeckPane from 'components/DeckPane'
+import SearchPane from "components/SearchPane";
+import DeckPane from "components/DeckPane";
 
 const DeckBuilderPane = (props) => {
     return (
@@ -7,7 +7,7 @@ const DeckBuilderPane = (props) => {
             <SearchPane />
             <DeckPane />
         </div>
-    )
-}
+    );
+};
 
 export default DeckBuilderPane;

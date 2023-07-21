@@ -6,12 +6,18 @@ import InlineButton from './common/InlineButton'
 import { useEffect, useState } from 'react'
 
 const SearchPane = (props) => {
+    const PaginatedCardList = (props) => {
+        return (
+
+        )
+    }
+
     const [cardData, setCardData] = useState([])
 
     useEffect(() => {
         try {
             const res = fetch(
-                'https://db.ygoprodeck.com/api/v7/cardinfo.php?format=Goat&num=20&offset=0',
+                'https://db.ygoprodeck.com/api/v7/cardinfo.php?format=Goat',
             )
             .then(response => response.json())
             .then((data) => {
