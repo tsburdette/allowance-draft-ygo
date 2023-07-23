@@ -13,6 +13,7 @@ const SearchPane = (props: {}) => {
 
     useEffect(() => {
         try {
+            // TODO: Maybe pull out this URL somewhere
             const res = fetch(
                 "https://db.ygoprodeck.com/api/v7/cardinfo.php?format=Goat"
             )
@@ -31,7 +32,8 @@ const SearchPane = (props: {}) => {
                 <input
                     placeholder="Search"
                     className="rounded p-1 max-w-full"
-                ></input>
+                />
+                {/* TODO: Make filter button work */}
                 <InlineButton text="Filter" />
             </div>
             <div className="font-bold my-3">TCGPlayer Prices</div>

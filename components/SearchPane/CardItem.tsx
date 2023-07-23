@@ -11,6 +11,7 @@ const CardItem = (props: { name: string; price: number }) => {
             <div>{props.name}</div>
             <div className="flex space-x-3">
                 <div>{USDollar.format(props.price)}</div>
+                {/* TODO: Make + button add to buy list */}
                 <InlineButton text="+" />
             </div>
         </div>

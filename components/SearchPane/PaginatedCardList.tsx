@@ -8,6 +8,7 @@ const PaginatedCardList = (props: {
 }) => {
     const { cardsPerPage, totalCards, currentPage, setCurrentPage } = props;
 
+    // TODO: Pull out paginate to util file
     const paginate = (current: number, end: number, neighbors: number) => {
         const leftNeighbors = current - neighbors,
             rightNeighbors = current + neighbors;
