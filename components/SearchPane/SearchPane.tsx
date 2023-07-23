@@ -6,7 +6,7 @@ import CardItem from "components/CardItem";
 import InlineButton from "components/common/InlineButton";
 import PaginatedCardList from "components/SearchPane/PaginatedCardList";
 
-const SearchPane = (props) => {
+const SearchPane = (props: {}) => {
     const [currentPage, setCurrentPage] = useState(1);
 
     const [cardData, setCardData] = useState([]);
@@ -38,7 +38,7 @@ const SearchPane = (props) => {
             <div className="space-y-2 mb-4">
                 {cardData
                     .slice((currentPage - 1) * 20, currentPage * 20)
-                    .map((card) => {
+                    .map((card: any) => {
                         return (
                             <CardItem
                                 key={card.name}

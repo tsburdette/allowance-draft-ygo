@@ -1,8 +1,8 @@
 import GridListSwitch from "components/GridListSwitch";
-import BigButton from "@/components/common/BigButton";
+import BigButton from "components/common/BigButton";
 
-const DeckPane = (props) => {
-    const CardInDeck = (props) => {
+const DeckPane = (props: {}) => {
+    const CardInDeck = (props: { name: string }) => {
         return (
             <span className="bg-kaiba-grey-500 p-5 m-5 rounded">
                 {props.name}

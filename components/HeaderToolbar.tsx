@@ -1,4 +1,4 @@
-const HeaderToolbar = (props) => {
+const HeaderToolbar = (props: {}) => {
     return (
         <div className="bg-kaiba-blue-500 max-w-full flex rounded p-3 justify-between">
             <div className="flex space-x-5">

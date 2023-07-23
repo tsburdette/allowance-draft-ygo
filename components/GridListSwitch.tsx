@@ -1,4 +1,4 @@
-const GridListSwitch = (props) => {
+const GridListSwitch = (props: {}) => {
     return (
         <label className="">
             <button className="rounded-l-md border border-kaiba-red-500 border-r-0 bg-kaiba-red-500 px-5 py-2">

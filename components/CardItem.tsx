@@ -1,6 +1,6 @@
 import InlineButton from "@/components/common/InlineButton";
 
-const CardItem = (props) => {
+const CardItem = (props: { name: string; price: number }) => {
     const USDollar = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD",

@@ -1,4 +1,11 @@
-const PaginatedCardList = (props) => {
+import { Dispatch, SetStateAction } from "react";
+
+const PaginatedCardList = (props: {
+    cardsPerPage: number;
+    totalCards: number;
+    currentPage: number;
+    setCurrentPage: Dispatch<SetStateAction<number>>;
+}) => {
     const { cardsPerPage, totalCards, currentPage, setCurrentPage } = props;
 
     const paginate = (current: number, end: number, neighbors: number) => {
@@ -33,16 +40,14 @@ const PaginatedCardList = (props) => {
         1
     );
 
-    const handleClick = (pageNumber) => {
+    const handleClick = (pageNumber: number | string) => {
         if (typeof pageNumber === "number") {
             setCurrentPage(pageNumber);
         }
     };
 
     return (
-        <div
-            className="inline-flex w-full place-content-center"
-        >
+        <div className="inline-flex w-full place-content-center">
             {pageNumbers.map((pageNumber, index) => {
                 return pageNumber !== currentPage ? (
                     <button
