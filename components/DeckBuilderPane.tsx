@@ -1,4 +1,4 @@
-import SearchPane from "components/SearchPane";
+import SearchPane from "components/SearchPane/SearchPane";
 import DeckPane from "components/DeckPane";
 
 const DeckBuilderPane = (props) => {
