@@ -1,4 +1,4 @@
-import GridListSwitch from "@/components/GridListSwitch";
+import GridListSwitch from "@/components/DeckPane/GridListSwitch";
 import BigButton from "@/components/common/BigButton";
 
 const DeckPane = (props: {}) => {
