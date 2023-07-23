@@ -1,6 +1,5 @@
-import Image from "next/image";
-import HeaderToolbar from "components/HeaderToolbar";
-import DeckBuilderPane from "components/DeckBuilderPane";
+import HeaderToolbar from "@/components/HeaderToolbar";
+import DeckBuilderPane from "@/components/DeckBuilderPane";
 
 export default function Home() {
     return (

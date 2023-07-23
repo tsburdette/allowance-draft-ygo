@@ -1,5 +1,5 @@
-import GridListSwitch from "components/GridListSwitch";
-import BigButton from "components/common/BigButton";
+import GridListSwitch from "@/components/GridListSwitch";
+import BigButton from "@/components/common/BigButton";
 
 const DeckPane = (props: {}) => {
     const CardInDeck = (props: { name: string }) => {

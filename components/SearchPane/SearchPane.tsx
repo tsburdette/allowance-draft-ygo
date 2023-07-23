@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-import CardItem from "components/CardItem";
-import InlineButton from "components/common/InlineButton";
-import PaginatedCardList from "components/SearchPane/PaginatedCardList";
+import CardItem from "@/components/SearchPane/CardItem";
+import InlineButton from "@/components/common/InlineButton";
+import PaginatedCardList from "@/components/SearchPane/PaginatedCardList";
 
 const SearchPane = (props: {}) => {
     const [currentPage, setCurrentPage] = useState(1);
