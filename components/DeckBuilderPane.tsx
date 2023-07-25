@@ -1,10 +1,10 @@
-import SearchPane from "@/components/SearchPane/SearchPane";
 import DeckPane from "@/components/DeckPane/DeckPane";
+import CollectionPane from "@/components/CollectionPane/CollectionPane";
 
 const DeckBuilderPane = (props: {}) => {
     return (
-        <div className="bg-kaiba-blue-400 max-h-screen p-3 rounded flex space-x-3">
-            <SearchPane />
+        <div className="bg-kaiba-blue-400 min-h-fit p-3 rounded flex space-x-3">
+            <CollectionPane />
             <DeckPane />
         </div>
     );
