@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const HeaderToolbar = (props: {}) => {
     return (
         <div className="bg-kaiba-blue-500 max-w-full flex rounded p-3 justify-between">
@@ -5,7 +7,12 @@ const HeaderToolbar = (props: {}) => {
                 {/* TODO: Make these links work */}
                 <div className="">Main</div>
                 <div className="">Collection</div>
-                <div className="">Deck Builder</div>
+                <Link href="/deckbuilder" className="">
+                    Deck Builder
+                </Link>
+                <Link href="/shopping" className="">
+                    Shopping
+                </Link>
                 <div className="">Wins & Losses</div>
             </div>
             <div className="flex space-x-5">
