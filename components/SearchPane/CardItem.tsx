@@ -1,18 +1,26 @@
 import InlineButton from "@/components/common/InlineButton";
+import { USDollar } from "@/utils/currencyUtils";
+import { useContext } from "react";
+import { CartDispatchContext } from "../Context/Cart/CartContext";
 
-const CardItem = (props: { name: string; price: number }) => {
-    const USDollar = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-    });
+const CardItem = (props: { name: string; unitCost: number }) => {
+    const { name, unitCost } = props;
+    const dispatch = useContext(CartDispatchContext);
+
+    const handleIncrease = () => {
+        dispatch({
+            type: "ADD_TO_CART",
+            payload: { name: name, unitCost: unitCost, amount: 1 },
+        });
+    };
 
     return (
         <div className="justify-between flex">
-            <div>{props.name}</div>
+            <div className="truncate mr-5">{name}</div>
             <div className="flex space-x-3">
-                <div>{USDollar.format(props.price)}</div>
+                <div>{USDollar.format(unitCost)}</div>
                 {/* TODO: Make + button add to buy list */}
-                <InlineButton text="+" />
+                <InlineButton onClick={handleIncrease} text="+" />
             </div>
         </div>
     );

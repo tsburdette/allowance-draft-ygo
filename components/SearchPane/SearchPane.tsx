@@ -45,7 +45,7 @@ const SearchPane = (props: {}) => {
                             <CardItem
                                 key={card.name}
                                 name={card.name}
-                                price={card.card_prices[0].tcgplayer_price}
+                                unitCost={card.card_prices[0].tcgplayer_price}
                             />
                         );
                     })}
