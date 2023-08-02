@@ -8,8 +8,8 @@ import { useContext } from "react";
 import { Card } from "../Context/Cart/CartTypes";
 
 const CartPane = (props: {}) => {
-    const { cartItems, totalCost } = useContext(CartContext);
-    const dispatch = useContext(CartDispatchContext);
+    const { state, dispatch } = useContext(CartContext);
+    const { cartItems, totalCost } = state;
 
     const handleClearClick = () => {
         dispatch({
@@ -23,7 +23,6 @@ const CartPane = (props: {}) => {
         unitCost: number;
     }) => {
         const { amount, name, unitCost } = props;
-        const dispatch = useContext(CartDispatchContext);
 
         const handleIncrease = () => {
             dispatch({

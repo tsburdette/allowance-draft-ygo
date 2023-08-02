@@ -8,7 +8,7 @@ import {
 import { Card, CartState } from "./CartTypes";
 
 // function for calculating total cost of cart
-export const sumItemsCost = (cartItems) => {
+export const sumItemsCost = (cartItems: Card[]) => {
     let total = cartItems
         .reduce(
             (total, product) => total + product.unitCost * product.amount,
@@ -18,7 +18,7 @@ export const sumItemsCost = (cartItems) => {
     return total;
 };
 
-export const sortCart = (cartItems) => {
+export const sortCart = (cartItems: Card[]) => {
     return cartItems.sort((a, b) => {
         const nameA = a.name.toUpperCase();
         const nameB = b.name.toUpperCase();
@@ -33,9 +33,9 @@ export const sortCart = (cartItems) => {
     });
 };
 
-const CartReducer = (cartState, action) => {
+const CartReducer = (cartState: any, action: any) => {
     const indexOfItem = cartState.cartItems.findIndex(
-        (item) => item.name === action.payload?.name
+        (item: any) => item.name === action.payload?.name
     );
 
     switch (action.type) {

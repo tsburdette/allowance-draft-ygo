@@ -1,11 +1,11 @@
 import InlineButton from "@/components/common/InlineButton";
 import { USDollar } from "@/utils/currencyUtils";
 import { useContext } from "react";
-import { CartDispatchContext } from "../Context/Cart/CartContext";
+import { CartContext } from "../Context/Cart/CartContext";
 
 const CardItem = (props: { name: string; unitCost: number }) => {
     const { name, unitCost } = props;
-    const dispatch = useContext(CartDispatchContext);
+    const { dispatch } = useContext(CartContext);
 
     const handleIncrease = () => {
         dispatch({

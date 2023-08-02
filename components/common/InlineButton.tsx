@@ -1,4 +1,4 @@
-const InlineButton = (props: { text: string; onClick?: () => {} }) => {
+const InlineButton = (props: { text: string; onClick?: () => void }) => {
     const { text, onClick } = props;
     return (
         <button

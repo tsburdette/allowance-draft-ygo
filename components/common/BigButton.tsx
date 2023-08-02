@@ -1,4 +1,4 @@
-const BigButton = (props: { text: string; onClick?: () => {} }) => {
+const BigButton = (props: { text: string; onClick?: () => void }) => {
     const { text, onClick } = props;
     return (
         <button
